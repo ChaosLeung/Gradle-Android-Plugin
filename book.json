@@ -1,0 +1,14 @@
+{
+	"gitbook": ">=2.0.0",
+	"language": "zh-cn",
+	"github": "ChaosLeong",
+	"githubHost": "https://github.com/"
+	"plugins": [
+        "disqus"
+    ],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "ChaosLeong"
+        }
+    }
+}

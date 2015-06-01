@@ -1,12 +1,8 @@
 # 构建类型
-默认情况下，Android 插件会自动建立构建应用程序的 debug 和r elease 版本的项目.
-它们的区别主要是能否在一个安全（non dev）的设备上调试,以及APK是如何签名.
 
 默认情况下，Android Plugin 会自动给项目构建 debug 和 release 版本。两个版本的区别在于能否在安全设备上调试，以及 APK 如何签名。
 
-debug 版采用通用的 `name/password` 对来自动创建的密钥证书进行签名（为了防止在构建过程中出现认证请求）。
-
-release 版在构建过程中不进行签名，需要稍后再进行签名。
+debug 版采用通用的 `name/password` 对来自动创建的密钥证书进行签名（为了防止在构建过程中出现认证请求）。release 版在构建过程中不进行签名，需要稍后再进行签名。
 
 这些配置是通过 **<font color='green'>BuildType</font>** 对象来完成的。默认情况下，两个实例都会被创建，分别是 **<font color='green'>debug</font>** 和 **<font color='green'>release</font>**
 
@@ -53,11 +49,11 @@ android {
  **<font color='green'>proguardFile</font>**|N/A (set only)|N/A (set only)
  **<font color='green'>proguardFiles</font>**|N/A (set only)|N/A (set only)
 
-除了以上属性外，*Build Types* 还会受项目源码和资源影响：
+除了以上属性外，*Build Types* 还会受项目源码和资源影响。  
 对于每一个 Build Type 都会自动创建一个匹配的 *sourceSet*。默认的路径为：
 
 ``` Grovvy
-src/<buildtypename>/
+src/&lt;buildtypename>/
 ```
 
 这意味着 *BuildType* 名称不能是 *main* 或者 *androidTest*（因为这两个是由 plugin 强制实现的），并且他们都必须是唯一的。

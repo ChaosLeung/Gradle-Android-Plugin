@@ -23,7 +23,7 @@ apply plugin: 'android-reporting'
 之后，在命令行中进入项目根目录，输入以下命令就可以运行所有测试并合并所有报告：
 
 ``` sh
-    gradle deviceCheck mergeAndroidReports --continue
+gradle deviceCheck mergeAndroidReports --continue
 ```
 
 ---

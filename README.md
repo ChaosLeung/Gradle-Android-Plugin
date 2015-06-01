@@ -4,6 +4,9 @@
 Gradle Plugin User Guide 官方地址  
 <http://tools.android.com/tech-docs/new-build-system/user-guide>
 
+在线阅读译文  
+<http://chaosleong.gitbooks.io/gradle-for-android/content/>
+
 译文 Github 地址  
 <https://github.com/ChaosLeong/Gradle-Android-Plugin>
 

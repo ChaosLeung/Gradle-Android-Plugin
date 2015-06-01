@@ -19,7 +19,7 @@ Gradle 项目也可以通过使用多项目配置依赖于其它 Gradle 项目�
     :libraries:lib1
     :libraries:lib2
 
-每一个项目都拥有自己的 `build.gradle` 文件来声明自己如何被构建。
+每一个项目都拥有自己的 `build.gradle` 文件来声明自己如何被构建。  
 另外，在根目录下还有一个 *setting.gradle* 文件用于声明所有项目。
 这些文件的结构如下：
 

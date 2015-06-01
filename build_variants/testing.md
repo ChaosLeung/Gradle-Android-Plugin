@@ -34,7 +34,7 @@ dependencies {
 * **<font color='green'>uninstallFlavor1Debug</font>**
 * ...
 
-最终的 HTML 报告根据每个 flavor 的报告汇总而成。
+最终的 HTML 报告根据每个 flavor 的报告汇总而成。  
 下面是测试结果和报告文件的路径，每组第一个是每个 flavor 版本的结果，第二个是汇总结果：
 
 * `build/androidTest-results/flavors/<FlavorName>`

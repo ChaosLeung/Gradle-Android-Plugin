@@ -134,4 +134,4 @@ Android task 特有类型的 API：
 
 这些 API 也可能会被修改。一般来说，目前的 API 是围绕着 task 的输入和输出入口来添加额外的处理（需要的时候）。欢迎反馈意见，特别是那些没有预见过的需求。
 
-对于 Gradle 的 task（DefaultTask，JavaCompile，Copy，Zip），请参考Gradle文档。
+对于 Gradle 的 task（DefaultTask，JavaCompile，Copy，Zip），请参考 Gradle 文档。

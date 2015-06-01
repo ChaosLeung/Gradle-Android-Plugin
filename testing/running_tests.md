@@ -1,7 +1,6 @@
 #  运行测试
 
-正如前面提到的，标志性 task **<font color='green'>connectedCheck</font>** 需要一个连接的设备来启动。  
-这个过程依赖于 **<font color='green'>androidTest</font>** task，因此 **<font color='green'>androidTest</font>** task 将会运行。这个 task 将会执行下面内容：
+正如前面提到的，标志性 task **<font color='green'>connectedCheck</font>** 需要一个连接的设备来启动。这个过程依赖于 **<font color='green'>androidTest</font>** task，因此 **<font color='green'>androidTest</font>** task 将会运行。这个 task 将会执行下面内容：
 
 * 确认应用和测试应用都被构建（依赖于 **<font color='green'>assembleDebug</font>** 和 **<font color='green'>assembleTest</font>**）
 * 安装这两个应用
@@ -14,7 +13,7 @@
 
 *`build/androidTest-results`*
 
-（这类似于 JUnit 的运行结果保存在 build/test-results)
+（这类似于 JUnit 的运行结果保存在 build/test-results 中)
 
 路径同样可以自定义配置：
 

@@ -6,8 +6,5 @@ Library 项目同样也可以独立于应用程序生成一个测试用的 apk �
 
 标识 Task 同样适用于 Library 项目（**<font color='green'>assembleDebug</font>**，**<font color='green'>assembleRelease</font>**），因此在命令行构建项目没有什么不同。
 
-至于其他的，Library 项目跟应用工程一样，它们都拥有 `build type` 和 `product flavor`，也可以生成多个不同版本的 `aar`。 
-
-注意，大多数的Build Type配置不支持库工程，然而你可以使用自定义`sourceSets`来配置库内容是用于工程使用还是测试使用.
-
-记住大部分 *Build Type* 的配置不适用于 Library 项目。但可以根据 Library 项目`是否被其它项目使用`，`是否用来测试`来作为使用自定义 *sourceSet* 的条件，从而动态使用 Library 项目的资源。
+至于其他的，Library 项目跟应用工程一样，它们都拥有 `build type` 和 `product flavor`，也可以生成多个不同版本的 `aar`。   
+大部分 *Build Type* 的配置不适用于 Library 项目。但可以根据 Library 项目 `是否被其它项目使用`，`是否用来测试` 来作为使用自定义 *sourceSet* 的条件，从而动态使用 Library 项目的资源。

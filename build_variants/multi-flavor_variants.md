@@ -54,8 +54,7 @@ android {
 * 一个来自 abi 组中的对象
 * 一个来自 version 组中的对象
 
-flavorDimensions 中的顺序决定了 flavor 的优先级，这对于资源来说非常重要，因为 flavor 中的值会替换定义在低优先级的 flavor 中的值。
-
+flavorDimensions 中的顺序决定了 flavor 的优先级，这对于资源来说非常重要，因为 flavor 中的值会替换定义在低优先级的 flavor 中的值。  
 flavor dimensions 使用最高的优先级定义，因此前面例子中的优先级为：
 
     abi > version > defaultConfig

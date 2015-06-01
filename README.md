@@ -14,7 +14,7 @@ Gradle Plugin User Guide 官方地址
 
 [**flyouting**][3] 的 [《Gradle Plugin User Guide 中文版》][4]
 
-并做了相应的修正以及更新，如有错误纰漏之处，还望各位指出。
+并做了相应的修正以及更新，如有纰漏，望斧正。
 
 ---
 License

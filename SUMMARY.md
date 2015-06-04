@@ -54,4 +54,5 @@
 	* [操作 task](advanced_build_customization/manipulating_tasks.md)
 	* [构建类型和产物定制的属性引用](advanced_build_customization/buildtype_and_product_flavor_property_reference.md)
 	* [使用sourceCompatibility 1.7](advanced_build_customization/using_sourcecompatibility_1.7.md)
-
+* [附录](appendix/README.md)
+	* [ApplicationId 与 packageName](appendix/applicationid_versus_packagename.md)

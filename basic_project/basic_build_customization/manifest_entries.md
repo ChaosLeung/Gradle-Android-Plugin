@@ -5,7 +5,7 @@
 * targetSdkVersion
 * versionCode
 * versionName
-* applicationId（有效的包名--查看 [ApplicationId 和 PackageName 的对比](http://tools.android.com/tech-docs/new-build-system/applicationid-vs-packagename) 了解更多信息）
+* applicationId（有效的包名--查看 [ApplicationId 与 PackageName](../../appendix/applicationid_versus_packagename.md) 了解更多信息）
 * testApplicationId（测试应用的包名）
 * testInstrumentationRunner（Instrumentation 的 test runner）
 

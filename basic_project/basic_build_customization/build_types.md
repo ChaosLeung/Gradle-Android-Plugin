@@ -38,14 +38,14 @@ android {
  属性名	 |debug 类型的默认值	 |release 或其他类型默认值
  ------------- |:-------------:| ----:
  **<font color='green'>debuggable</font>**|true|false
- **<font color='green'>jniDebugBuild</font>**|false|false
- **<font color='green'>renderscriptDebugBuild</font>**|false|false
+ **<font color='green'>jniDebuggable</font>**|false|false
+ **<font color='green'>renderscriptDebuggable</font>**|false|false
  **<font color='green'>renderscriptOptimLevel</font>**|3|3
  **<font color='green'>applicationIdSuffix</font>**|null|null
  **<font color='green'>versionNameSuffix</font>**|null|null
  **<font color='green'>signingConfig</font>** |android.signingConfigs.debug|null
- **<font color='green'>zipAlign</font>**|false|true
- **<font color='green'>runProguard</font>**|false|false
+ **<font color='green'>zipAlignEnabled</font>**|false|true
+ **<font color='green'>minifyEnabled</font>**|false|false
  **<font color='green'>proguardFile</font>**|N/A (set only)|N/A (set only)
  **<font color='green'>proguardFiles</font>**|N/A (set only)|N/A (set only)
 

@@ -21,7 +21,7 @@ android {
 
 ---
 
-> 注意：**<font color='green'>mavenCentral()`</font>** 是指定仓库 URL 的简单方法。Gradle 支持远程和本地仓库。
+> 注意：**<font color='green'>mavenCentral()</font>** 是指定仓库 URL 的简单方法。Gradle 支持远程和本地仓库。
 
 ---
 
@@ -29,7 +29,7 @@ android {
 
 ---
 
-更多关于设置 dependencies 的信息，请参考 [Gradle用户指南][1] 和 [DSL][2] 文档。
+更多关于设置 dependencies 的信息，请参考 [Gradle 用户指南][1] 和 [DSL][2] 文档。
 
 [1]: http://gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
 [2]: http://gradle.org/docs/current/dsl/org.gradle.api.artifacts.dsl.DependencyHandler.html

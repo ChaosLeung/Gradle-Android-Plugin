@@ -3,9 +3,9 @@
 签名一个应用程序需要以下文件:
 
 * keystore
-* keystore密码
-* key的别名（alias）
-* key密码
+* keystore 密码
+* key 的别名（alias）
+* key 密码
 * 存储类型
 
 位置，key 名，两个密码和存储类型一起组成了这个签名配置（*SigningConfig*）

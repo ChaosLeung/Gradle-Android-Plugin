@@ -4,7 +4,7 @@
 
 `build/reports/androidTests`
 
-类似于 JUnit 的报告所在位置 `build/reports/tests`，其它的报告通常位于 `build/reports/< plugin >/`
+类似于 JUnit 的报告所在位置 `build/reports/tests`，其它的报告通常位于 `build/reports/&lt;plugin>/`
 
 这个路径也可以通过以下方式自定义：
 

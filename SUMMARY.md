@@ -2,7 +2,6 @@
 
 * [译者序](README.md)
 * [简介](introduction/README.md)
-	* [新构建系统的目标](introduction/goals_of_the_new_build_system.md)
 	* [为什么使用 Gradle?](introduction/why_gradle.md)
 * [配置要求](requirements/README.md)
 * [基础项目](basic_project/README.md)
@@ -30,8 +29,8 @@
 		* [引用 Library 项目](dependencies,android_libraries_and_multi-project_setup/library_projects/referencing_a_library.md)
 		* [Library 项目发布](dependencies,android_libraries_and_multi-project_setup/library_projects/library_publication.md)
 * [测试](testing/README.md)
-	* [单元测试](testing/unit_testing.md)
 	* [基本知识和配置](testing/basics_and_configuration.md)
+	* [解决 main APK 与 test APK 之间的冲突](testing/resolving_conflicts_between_main_and_test_APK.md)
 	* [运行测试](testing/running_tests.md)
 	* [测试 Android Library 项目](testing/testing_android_libraries.md)
 	* [测试报告](testing/test_reports/README.md)

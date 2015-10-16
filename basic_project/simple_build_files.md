@@ -1,11 +1,14 @@
 # 构建文件示例
 一个纯 Java 的 Gradle 项目的 build.gradle 文件可以简单到只包含以下内容:
+
 ``` groovy
 apply plugin: 'java'
 ```
+
 这里引入了 Gradle 的 Java 插件，该插件提供了所有构建和测试 Java 应用程序所需的东西。
 
 最简单的 Android Gradle 项目的 build.gradle：
+
 ``` groovy
 buildscript {
     repositories {
@@ -13,11 +16,11 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.11.1'
+        classpath 'com.android.tools.build:gradle:1.3.0'
     }
 }
 
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 19
@@ -25,13 +28,13 @@ android {
 }
 ```
 
-<font color='red'>译者注：</font>目前 Gradle Tools 版本为 1.2.3 （2015.05.26）
+<font color='red'>译者注：</font>目前 Gradle Tools 版本为 1.3.0 （2015.10.16）
 
 上述内容包含了 Android 构建文件的 3 个主要部分：
 
 **<font color='green'>buildscript { ... }</font>** 配置了驱动构建的代码.  
 在这部分，声明了项目使用 Maven 仓库，并且声明了一个 Maven 文件的 classpath。  
-该文件声明了项目的 Android Gradle 插件版本为 0.11.1。
+该文件声明了项目的 Android Gradle 插件版本为 1.3.0。
 
 ---
 
@@ -42,8 +45,8 @@ android {
 接下来，跟前面提到的 Java 插件一样添加了 **<font color='green'>android</font>** 插件.
 
 最后，**<font color='green'>android { ... }</font>** 配置了所有 android 构建所需的参数，这也是 Android DSL 的入口点。  
-默认情况下，只有 **<font color='green'>compileSdkVersion</font>** 和 **<font color='green'>buildtoolsVersion</font> ** 这两个属性是必须的。  
-**<font color='green'>compileSdkVersion</font>** 属性相当于旧构建系统中`project.properites` 文件中的 **<font color='green'>target</font>** 属性。这个新的属性可以跟旧的 **<font color='green'>target</font>** 属性一样指定一个 `int` 或者 `String` 类型的值。
+默认情况下，只有 **<font color='green'>compileSdkVersion</font>** 和 **<font color='green'>buildtoolsVersion</font>** 这两个属性是必须的。  
+**<font color='green'>compileSdkVersion</font>** 属性相当于旧构建系统中 `project.properites` 文件中的 **<font color='green'>target</font>** 属性。这个新的属性可以跟旧的 **<font color='green'>target</font>** 属性一样指定一个 `int` 或者 `String` 类型的值。
 
 ---
 

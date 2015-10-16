@@ -27,7 +27,7 @@ android {
 
 在 **<font color='green'>android</font>** 元素中的 **<font color='green'>defaultConfig</font>** 定义了所有的配置。
 
-Android Plugin 的早期版本使用`packageName`来配置 manifest 的 `packageName` 属性。从 0.11.0 版本开始，你应该在 `build.gradle` 中使用 `applicationId` 来配置 manifest 的 `packageName` 属性。这是为了消除应用程序的 packageName（程序的 ID ）和 java 包名所引起的歧义。
+Android Plugin 的早期版本使用 `packageName` 来配置 manifest 的 `packageName` 属性。从 0.11.0 版本开始，你应该在 `build.gradle` 中使用 `applicationId` 来配置 manifest 的 `packageName` 属性。这是为了消除应用程序的 packageName（程序的 ID ）和 java 包名所引起的歧义。
 
 在构建文件中定义的强大之处在于它是动态的。 例如，可以从一个文件中或者其它自定义的逻辑代码中读取版本信息：
 

@@ -8,7 +8,7 @@
 
 下面的值可以用来配置测试应用，相当于配置 `<instrumentation>` 节点：
 
-* `testPackageName`
+* `testApplicationId`
 * `testInstrumentationRunner`
 * `testHandleProfiling`
 * `testfunctionalTest`
@@ -18,7 +18,7 @@
 ``` Groovy
 android {
     defaultConfig {
-        testPackageName "com.test.foo"
+        testApplicationId "com.test.foo"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
         testHandleProfiling true
         testFunctionalTest true

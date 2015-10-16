@@ -1,7 +1,7 @@
 # 译者序
 ---
 
-Gradle Plugin User Guide 官方地址  
+《Gradle Plugin User Guide》 官方地址  
 <http://tools.android.com/tech-docs/new-build-system/user-guide>
 
 在线阅读译文  

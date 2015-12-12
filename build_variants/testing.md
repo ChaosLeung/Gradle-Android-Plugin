@@ -1,6 +1,6 @@
 # 测试
 
-测试 multi-flavors 项目非常类似于测试简单的项目。
+测试 multi-flavors 项目与测试普通的项目相差无几。
 
 **<font color='green'>androidTest</font>** 的 *sourceSet* 用于定义所有 flavor 共用的测试，但是每一个 flavor 也可以有它特有的测试。
 

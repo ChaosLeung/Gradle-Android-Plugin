@@ -24,8 +24,4 @@ android {
 
 这里创建了两个flavor，名为 **<font color='green'>flavor1</font>** 和 **<font color='green'>flavor2</font>**。
 
----
-
-> 注意：flavor 的命名不能与已存在的 *Build Type* 或者与 **<font color='green'>androidTest</font>** 的 *sourceSet* 有冲突。
-
----
+> 注意：flavor 的命名不能与已存在的 *Build Type* 或者与 **<font color='green'>androidTest</font>**、**<font color='green'>test</font>** *sourceSet* 有冲突。

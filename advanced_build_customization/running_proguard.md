@@ -1,6 +1,6 @@
 # 运行 ProGuard
 
-从 `Gradle Plugin for ProGuard version 4.10` 之后就开始支持 ProGuard。ProGuard 插件是自动添加进来的。如果 Build Type 的 `minifyEnabled` 属性被设置为 true，对应的 task 将会自动创建。
+ProGuard 插件是自动添加进来的，如果 *Build Type* 的 `minifyEnabled` 属性被设置为 true，对应的 task 将会自动创建。
 
 ``` Groovy
 android {
@@ -21,7 +21,7 @@ android {
 }
 ```
 
-发布版本将会使用它的 Build Type 中声明的规则文件，product flavor（定制的产品版本）将会使用对应的 flavor 中声明的规则文件。
+Variants 会使用在 build type 及 flavors 声明的所有规则文件。
 
 这里有两个默认的规则文件：
 * proguard-android.txt

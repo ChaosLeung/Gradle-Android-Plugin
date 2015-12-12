@@ -1,7 +1,7 @@
 # 操作 task
 
 一般的 Java 项目中有一组有限的 task 用于互相处理并最终生成一个输出。  
-**<font color='green'>classes</font>** 是一个编译 Java 源代码的 task。  
+**<font color='green'>classes</font>** task 用于编译 Java 源代码。  
 可以在 *build.gradle* 文件中通过脚本很容易使用 **<font color='green'>classes</font>** task。**<font color='green'>classes</font>** 是 **<font color='green'>project.tasks.classes</font>** 的缩写。
 
 相比之下在 Android 项目中这就有点复杂。因为 Android 项目中会有大量相同的 task，并且它们的名字基于 *Build Types* 和 *Product Flavor* 生成。
@@ -12,10 +12,9 @@
 * **<font color='green'>libraryVariants</font>**（只适用于 library plugin）
 * **<font color='green'>testVariants</font>**（app、library plugin 均适用）
 
-这三个属性会分别返回一个 `ApplicationVariant`、`LibraryVariant` 和 `TestVariant` 对象的 [DomainObjectCollection](http://www.gradle.org/docs/current/javadoc/org/gradle/api/DomainObjectCollection.html
-)。
+这三个属性会分别返回一个 `ApplicationVariant`、`LibraryVariant` 和 `TestVariant` 对象的 [DomainObjectCollection][1]。
 
-注意，使用这三个 collection 中的其中一个都会触发生成所有对应的 task。这意味着使用 collection 之后不需要更改配置。
+注意，使用这三个 collection 中的其中一个都会触发生成所有对应的 task。这意味着使用 collection 之后不需要重新配置。
 
 `DomainObjectCollection` 可以直接访问所有对象，或者通过过滤器进行筛选。
 
@@ -28,7 +27,7 @@ android.applicationVariants.each { variant ->
 这三个 variant 类都拥有下面的属性：
 
 属性名	       	|属性类型	    |说明
--------------  	|:-------------:| -----:
+:-------------  	|:-------------| :-----
 name	        |String	|Variant 的名字，唯一
 description		|String	|Variant 的描述说明
 dirName	    	|String|Variant 的子文件夹名，唯一。可能有不止一个子文件夹，例如 “debug/flavor1”
@@ -48,7 +47,7 @@ assemble		|DefaultTask	|Variant 的标志性 assemble task
 `ApplicationVariant` 类还有以下附加属性：
 
 属性名			|属性类型	|说明
--------------  	|:-------------:| -----:
+:-------------  	|:-------------| :-----
 buildType		|BuildType	|Variant 的 BuildType
 productFlavors	|List&lt;ProductFlavor>	|Variant 的 ProductFlavor，一般不为空但允许为空
 mergedFlavor	|ProductFlavor	|android.defaultConfig 和 variant.productFlavors 的组合
@@ -64,7 +63,7 @@ uninstall	|DefaultTask	|负责卸载的 task
 `LibraryVariant` 类还有以下附加属性：
 
 属性名			|属性类型	|说明
--------------  	|:-------------:| -----:
+:-------------  	|:-------------| :-----
 buildType		|BuildType	|Variant 的 BuildType
 mergedFlavor	|ProductFlavor	|只有 android.defaultConfig
 testVariant		|BuildVariant	|用于测试 Variant
@@ -73,7 +72,7 @@ packageLibrary	|Zip	|用于打包 Library 项目的 AAR 文件。如果是 Libra
 `TestVariant` 类还有以下属性：
 
 属性名			|属性类型	|说明
--------------  	|:-------------:| -----:
+:-------------  	|:-------------| :-----
 buildType	|BuildType	|Variant 的 Build Type
 productFlavors	|List&lt;ProductFlavor>	|Variant 的 ProductFlavor。一般不为空但允许为空
 mergedFlavor	|ProductFlavor	|android.defaultConfig 和 variant.productFlavors 的组合
@@ -132,6 +131,8 @@ Android task 特有类型的 API：
 
 另外需要注意，上面的 task 中除了 ZipAlign 这个 task 类型，其它类型都要求设置私有数据来让它们运行。这意味着不能手动创建这些类型的新 task 实例。
 
-这些 API 也可能会被修改。一般来说，目前的 API 是围绕着 task 的输入和输出入口来添加额外的处理（需要的时候）。欢迎反馈意见，特别是那些没有预见过的需求。
+这些 API 也可能会被修改。一般来说，目前的 API 是围绕着 task 的输入和输出入口来添加额外的处理（需要的时候）。欢迎反馈意见，特别是那些没有考虑过的需求。
 
 对于 Gradle 的 task（DefaultTask，JavaCompile，Copy，Zip），请参考 Gradle 文档。
+
+[1]: http://www.gradle.org/docs/current/javadoc/org/gradle/api/DomainObjectCollection.html

@@ -7,19 +7,20 @@ Library 项目跟常规的 Android 项目很相似，只是有部分不同。
 ``` Groovy
 buildscript {
     repositories {
-        mavenCentral()
+        jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.3.0'
+        classpath 'com.android.tools.build:gradle:1.3.1'
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 15
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
 }
 ```
 
-这里创建了一个使用 API 15 编译的 Library 项目，并且 *SourceSet*、 dependencies（依赖关系）的配置方法与普通项目一样，且同样支持自定义配置。
+这里创建了一个使用 API 23 编译的 Library 项目，并且 *SourceSet*、 *build types* 及 dependencies 的配置方法与普通项目一样，且同样支持自定义配置。

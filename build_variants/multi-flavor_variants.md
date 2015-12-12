@@ -3,26 +3,44 @@
 某些情况下，应用可能需要基于多个标准来创建多个版本。  
 例如，Google Play 中的 multi-apk 支持 4 种过滤器。根据每个过滤器来创建不同的 APK 需要使用 *Product Flavor* 分组。
 
-假如有个游戏有免费版和付费版，并且需要在 multi-apk 支持中使用 ABI 过滤器（<font color='red'>译注：</font>ABI，应用二进制接口，优点是不需要改动应用的任何代码就能够将应用迁移到任何支持相同 ABI 的平台上）。该游戏应用需要 3 个 ABI 和两个特定版本，因此就需要生成 6 个 APK（忽略不同 *Build Types* 生成的 variant 版本）。  
+假如有个游戏有免费版和付费版，并且需要在 multi-apk 支持中使用 ABI 过滤器。该游戏应用需要 3 个 ABI 和两个特定版本，因此就需要生成 6 个 APK（忽略不同 *Build Types* 生成的 variant 版本）。  
 然而，3 个 ABI 付费版的源代码都是相同的，因此创建 6 个 flavor 来实现并不是一个好办法。  
-相反的，可以使用两个 flavor 分组，并且让它自动构建所有可能的 variant 组合。
+作为代替，可以使用两个 flavor 分组，并且让它自动构建所有可能的 variant 组合。
 
-对应的功能实现需要使用 Flavor Dimensions（<font color='red'>译注：</font> `Flavor Dimensions` 对应旧版中的 `Flavor Groups`），并将 flavor 分配到一个指定的 Group 中。
+对应的功能实现需要使用 Flavor Dimensions（<font color='red'>译注：</font> `Flavor Dimensions` 对应旧版中的 `Flavor Groups`），并将 flavor 分配到一个指定的 dimension 中。
 
 ``` Grovvy
 android {
     ...
 
+
     flavorDimensions "abi", "version"
+
 
     productFlavors {
         freeapp {
-            flavorDimension "version"
+            dimension "version"
+            ...
+        }
+
+        paidapp {
+            dimension "version"
+            ...
+        }
+
+
+        arm {
+            dimension "abi"
+            ...
+        }
+
+        mips {
+            dimension "abi"
             ...
         }
 
         x86 {
-            flavorDimension "abi"
+            dimension "abi"
             ...
         }
     }
@@ -55,7 +73,7 @@ android {
 * 一个来自 version 组中的对象
 
 flavorDimensions 中的顺序决定了 flavor 的优先级，这对于资源来说非常重要，因为 flavor 中的值会替换定义在低优先级的 flavor 中的值。  
-flavor dimensions 使用最高的优先级定义，因此前面例子中的优先级为：
+flavor dimension 使用最高的优先级定义，因此前面例子中的优先级为：
 
     abi > version > defaultConfig
 

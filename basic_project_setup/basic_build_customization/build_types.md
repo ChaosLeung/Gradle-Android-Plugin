@@ -1,6 +1,6 @@
 # 构建类型
 
-默认情况下，Android Plugin 会自动给项目构建 debug 和 release 版本。两个版本的区别在于能否在安全设备上调试，以及 APK 如何签名。debug 版采用通用的 `name/password` 对来自动创建的密钥证书进行签名（为了防止在构建过程中出现认证请求）。release 版在构建过程中不进行签名，需要稍后再进行签名。
+默认情况下，Android Plugin 会自动给项目构建 debug 和 release 版本。两个版本的区别在于能否在安全设备上调试，以及 APK 如何签名。debug 使用通过通用的 `name/password` 对生成的密钥证书进行签名（为了防止在构建过程中出现认证请求）。release 在构建过程中不进行签名，需要自行签名。
 
 这些配置是通过 **<font color='green'>BuildType</font>** 对象来完成的。默认情况下，**<font color='green'>debug</font>** 和 **<font color='green'>release</font>** 实例都会被创建。Android plugin 允许像创建其他 *Build Type* 一样定制这两个实例。可以在 **<font color='green'>buildTypes</font>** 的 DSL 容器中完成：
 

@@ -1,5 +1,9 @@
 # 简介
 
+## DSL 文档
+
+如需了解所有在 <font color='green'>build.gradle</font> 文件可用的选项，请查看 [DSL reference](http://google.github.io/android-gradle-dsl/current/)。
+
 ## 新构建系统的目标
 
 新构建系统的目标:

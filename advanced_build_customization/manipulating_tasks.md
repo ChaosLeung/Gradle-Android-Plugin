@@ -1,8 +1,8 @@
 # 操作 task
 
-一般的 Java 项目中有一组有限的 task 用于互相处理并最终生成一个输出。  
+一般的 Java 项目中有一组 task 用于协同处理并最终生成一个输出。  
 **<font color='green'>classes</font>** task 用于编译 Java 源代码。  
-可以在 *build.gradle* 文件中通过脚本很容易使用 **<font color='green'>classes</font>** task。**<font color='green'>classes</font>** 是 **<font color='green'>project.tasks.classes</font>** 的缩写。
+可以在 *build.gradle* 文件中使用 **<font color='green'>classes</font>** 访问 **<font color='green'>classes</font>** task 。**<font color='green'>classes</font>** 是 **<font color='green'>project.tasks.classes</font>** 的缩写。
 
 相比之下在 Android 项目中这就有点复杂。因为 Android 项目中会有大量相同的 task，并且它们的名字基于 *Build Types* 和 *Product Flavor* 生成。
 
@@ -125,13 +125,13 @@ Android task 特有类型的 API：
         * 直接在 Variant 对象中使用 “outputFile” 可以改变最终的输出文件夹。
 
 每个 task 类型的 API 都受 Gradle 的工作方式和 Android plugin 的配置方式限制。  
-首先，Gradle 中存在的 task 只能配置输入输出的路径以及部分可能使用的选项标识。因此，task 只能定义一些输入或者输出。
+首先，Gradle 中存在的 task 只能配置输入输出的路径以及部分可能使用的可选标识。因此，这些 task 只能定义一些输入或者输出。
 
-其次，这里面大多数 task 的输入都不是单一的，一般都混合了 *sourceSet*、*Build Type* 和 *Product Flavor* 中的值。保持构建文件的简洁和可读性，同时让开发者通过 DSL 修改这些对象来影响构建的过程，而不是深入修改输入和 task 的选项。
+其次，这里面大多数 task 的输入都不是单一的，一般都混合了 *sourceSet*、*Build Type* 和 *Product Flavor* 中的值。所以为了保持构建文件的简洁和可读性，目标自然是让开发者通过 DSL 修改这些对象来影响构建的过程，而不是深入修改输入和 task 的选项。
 
-另外需要注意，上面的 task 中除了 ZipAlign 这个 task 类型，其它类型都要求设置私有数据来让它们运行。这意味着不能手动创建这些类型的新 task 实例。
+另外需要注意，上面的 task 中除了 ZipAlign，其它都要求设置私有数据进行工作。这意味着不能手动创建这些类型的 task 实例。
 
-这些 API 也可能会被修改。一般来说，目前的 API 是围绕着 task 的输入和输出入口来添加额外的处理（需要的时候）。欢迎反馈意见，特别是那些没有考虑过的需求。
+这些 API 也可能会被修改。一般来说，目前的 API 是围绕着 task 的输出和输入（如果可能）来添加额外的处理（必要时）。欢迎反馈意见，特别是那些没有考虑过的需求。
 
 对于 Gradle 的 task（DefaultTask，JavaCompile，Copy，Zip），请参考 Gradle 文档。
 

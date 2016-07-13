@@ -21,7 +21,7 @@ BuildConfig 包含的值如下：
 * **<font color='green'>String BUILD_TYPE</font>** —— build type 的名字，例："release"
 * **<font color='green'>String FLAVOR</font>** —— flavor 的名字，例："paidapp"
 
-如果项目使用了 flavor dimensions，会添加额外的值。使用之前提到的片段，则有如下 BuildConfig：
+如果项目使用了 flavor dimensions，会添加额外的值。按照之前的示例，则有如下 BuildConfig：
 
 * **<font color='green'>String FLAVOR = "armFreeapp"</font>**
 * **<font color='green'>String FLAVOR_abi = "arm"</font>**

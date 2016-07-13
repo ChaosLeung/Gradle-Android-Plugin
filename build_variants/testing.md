@@ -19,7 +19,7 @@ dependencies {
 }
 ```
 
-这些测试可以通过主要的标志性 **<font color='green'>deviceCheck</font>** task 或者主要的 **<font color='green'>androidTest</font>** task（当 flavor 被使用的时候这个 task 相当于一个标志性 task）来执行。
+这些测试可以通过 **<font color='green'>deviceCheck</font>** task 或者 **<font color='green'>androidTest</font>** task（当 flavor 被使用的时候这个 task 相当于一个标志性 task）来执行。
 
 每个 flavor 也拥有自己的 task 来执行测试：`androidTest<VariantName>`。例如：
 

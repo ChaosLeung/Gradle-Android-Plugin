@@ -12,7 +12,7 @@
 		* [通用 Task](basic_project_setup/build_tasks/general_tasks.md)
 		* [Java 项目的 Task](basic_project_setup/build_tasks/java_project_tasks.md)
 		* [Android Tasks](basic_project_setup/build_tasks/android_tasks.md)
-	* [基本的构建定制](basic_project_setup/basic_build_customization/README.md)
+	* [基本的构建定制](basic_project_setup/basic_build_customization/README.md)
 		* [Manifest 属性](basic_project_setup/basic_build_customization/manifest_entries.md)
 		* [构建类型](basic_project_setup/basic_build_customization/build_types.md)
 		* [签名配置](basic_project_setup/basic_build_customization/signing_configurations.md)

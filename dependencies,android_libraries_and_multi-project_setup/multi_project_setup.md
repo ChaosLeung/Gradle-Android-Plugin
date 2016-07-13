@@ -1,6 +1,6 @@
 # 多项目设置
 
-Gradle 项目也可以通过使用多项目配置依赖于其它 Gradle 项目。多项目配置的实现通常是在一个根项目路径下将所有项目作为子文件夹包含进去。例如，给定以下项目结构：
+Gradle 项目可以通过多项目配置依赖于其它 Gradle 项目。通常使用多项目配置会将所有库项目（如 lib1、lib2）添加到指定的根项目（如 libraries）。例如，给定以下项目结构：
 
     MyProject/
      + app/
@@ -8,15 +8,15 @@ Gradle 项目也可以通过使用多项目配置依赖于其它 Gradle 项目�
         + lib1/
         + lib2/
 
-我们可以定义3个项目。Gradle 将会按照以下名字进行映射：
+我们可以找出3个项目。Gradle 将会按照以下名字进行映射：
 
     :app
     :libraries:lib1
     :libraries:lib2
 
-每个项目都有 `build.gradle` 文件来声明如何被构建。另外，在项目根目录下还有一个 *setting.gradle* 文件用于声明所有项目。这些文件的结构如下：
+每个项目都有 `build.gradle` 文件来声明自身构建逻辑。另外，在项目根目录下还有一个 *setting.gradle* 文件用于声明所有项目。整个项目结构如下：
 
-    MyProject/
+    MyProject/ 
      | settings.gradle
      + app/
         | build.gradle
@@ -26,7 +26,7 @@ Gradle 项目也可以通过使用多项目配置依赖于其它 Gradle 项目�
         + lib2/
            | build.gradle
 
-其中 `setting.gradle` 的内容非常简单。该文件定义了哪一个文件夹下的是 Gradle 项目：
+其中 `setting.gradle` 的内容非常简单。该文件定义了各 Gradle 项目的位置：
 
 ``` Groovy
 include ':app', ':libraries:lib1', ':libraries:lib2'

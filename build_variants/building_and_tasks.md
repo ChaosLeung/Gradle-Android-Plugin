@@ -1,6 +1,6 @@
 # 构建和任务
 
-我们前面提到每一个 *Build Type* 会创建自己的 `assemble<name>` task，但是 *Build Variant* 是 *Build Type* 和 *Product Flavor* 的组合。
+我们前面提到每一个 *Build Type* 会创建自己的 `assemble<name>` task，但是 *Build Variants* 是 *Build Type* 和 *Product Flavor* 的组合。
 
 当使用 *Product Flavor* 的时候，将会创建更多的 assemble-type task。分别是：
 

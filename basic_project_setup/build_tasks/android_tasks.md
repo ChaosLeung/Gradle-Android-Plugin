@@ -17,7 +17,7 @@ Android plugin 使用相同的约定以兼容其他插件，并且附加了标�
 
 这些新的标志性 task 是必须的，以保证能够在没有设备连接的情况下执行定期检查。 注意 **<font color='green'>build</font>** task 不依赖于 **<font color='green'>deviceCheck</font>** 或者 **<font color='green'>connectedCheck</font>**。
 
-一个 Android 项目至少拥有两个输出：debug APK 和 release APK。每个输出都有各自的标志性 task 以便能够单独构建它们。
+一个 Android 项目至少拥有两个输出：debug APK 和 release APK。每个输出都有各自的标志性 task 以便单独构建它们。
 
 * **<font color='green'>assemble</font>**
   * **<font color='green'>assembleDebug</font>**
@@ -50,7 +50,7 @@ check task 也有拥有依赖:
 * **<font color='green'>deviceCheck</font>**
   * 进行测试时才会触发
 
-最后，只要项目可被安装（需要签名），插件会为所有的构建类型（**<font color='green'>debug, release, test</font>**）创建 install 及 uninstall 相关的 task。例：
+最后，只要可被安装（需要签名），插件会为所有的构建类型（**<font color='green'>debug, release, test</font>**）创建 install 及 uninstall 相关的 task。例：
 
 * **<font color='green'>installDebug</font>**
 * **<font color='green'>installRelease</font>**

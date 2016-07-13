@@ -1,6 +1,6 @@
 # 构建文件示例
 
-比较简单的 Android Gradle 项目的 build.gradle 如下：
+比较简单的 Android Gradle 项目的 *build.gradle* 如下：
 
 ``` Groovy
 buildscript {
@@ -25,7 +25,7 @@ android {
 
 **<font color='green'>buildscript { ... }</font>** 配置了用于驱动构建的代码。上述代码声明了项目使用 jCenter 仓库，并且声明了一个 jCenter 文件的 classpath。该文件声明了项目的 Android Gradle 插件版本为 1.3.1。
 
-> **注意**：这里的配置只会影响构建过程所需的类库，而不是项目的源代码。项目自身需声明自身的仓库和依赖。这个后面会提到。
+> **注意**：这里的配置只会影响构建过程所需的类库，而不会影响项目的源代码。项目自身需声明自身的仓库和依赖。这个后面会提到。
 
 接着，使用了 **<font color='green'>com.android.application</font>** 插件。该插件用于编译 Android 应用。
 
@@ -34,7 +34,8 @@ android {
 
 > **重要：**  **<font color='green'>com.android.application</font>** 插件不能与 **<font color='green'>java</font>** 插件同时使用，否则会导致构建错误。
 
-> **注意：**  你需要在相同路径下添加一个 *local.properties* 文件，并使用 **<font color='green'>sdk.dir</font>** 属性来设置 SDK 路径。或通过设置 **<font color='green'>ANDROID_HOME</font>** 环境变量来设置 SDK 路径，这两种方式没有什么不同，根据你自己的喜好选择其中一种设置。*local.properties* 文件示例：
+> **注意：**  你需要在相同路径下添加一个 *local.properties* 文件，并使用 **<font color='green'>sdk.dir</font>** 属性来设置 SDK 路径。或通过设置 **<font color='green'>ANDROID_HOME</font>** 环境变量来设置 SDK 路径。这两种方式都是一样的，根据喜好选择其中一种。  
+*local.properties* 文件示例：
 ```
 sdk.dir=/path/to/Android/Sdk
 ```	

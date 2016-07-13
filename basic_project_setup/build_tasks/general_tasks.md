@@ -1,6 +1,6 @@
 # 通用 Task
 
-添加一个插件到构建文件中将会自动创建一系列构建任务（build tasks）去执行（注：Gradle 属于任务驱动型构建工具，构建过程基于 Task）。  
+添加一个 plugin 到构建文件中将会自动创建一系列构建任务（build tasks）去执行（注：Gradle 属于任务驱动型构建工具，构建过程基于 Task）。  
 Java 插件和 Android 插件都会创建以下 Task:
 
 * **<font color='green'>assemble</font>** 
@@ -28,6 +28,6 @@ gradle tasks
 gradle tasks --all
 ```
 
-> 注意：Gradle 会自动监视一个 task 声明的所有输入和输出。
+> 注意：Gradle 会自动监听 task 声明的输入和输出。
   
-两次执行 **<font color='green'>build</font>** task 并且期间项目没有任何改动，Gradle 将会 `UP-TO-DATE` 通知所有 task，这意味着第二次 build 执行的时候不会请求任何 task 执行。这允许 task 之间互相依赖，而不会导致不需要的构建请求被执行。
+多次执行 **<font color='green'>build</font>** task 并且期间项目没有任何改动，Gradle 将会提示所有 task `UP-TO-DATE`，这意味着不需要再做任何编译工作。这允许 task 之间互相依赖，而不需要额外的构建操作。

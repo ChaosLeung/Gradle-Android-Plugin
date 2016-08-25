@@ -52,3 +52,4 @@
 	* [设置 Java 的版本](advanced_build_customization/setting_language_level.md)
 * [附录](appendix/README.md)
 	* [ApplicationId 与 packageName](appendix/applicationid_versus_packagename.md)
+	* [AAR 格式文件](appendix/aar_format.md)

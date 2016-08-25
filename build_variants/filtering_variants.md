@@ -23,7 +23,7 @@ android {
 
 * **<font color='green'>realDataDebug</font>**
 * **<font color='green'>realDataRelease</font>**
-* **<font color='green'>realDataDebug</font>**
+* **<font color='green'>fakeDataDebug</font>**
 
 查看 [DSL reference][1] 了解可以通过 **<font color='green'>variant</font>** 获取的所有属性。
 

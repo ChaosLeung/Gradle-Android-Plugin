@@ -1,5 +1,6 @@
+**[Deprecated]** 由于官方已经有相关的中文文档，译文不再维护。最新的内容请访问[此链接](https://developer.android.com/studio/build/index.html)，如果网页内容为英文版，请滚动到网页底部，并在右下角选择语言。
+
 # 译者序
----
 
 《Gradle Plugin User Guide》 官方地址  
 <http://tools.android.com/tech-docs/new-build-system/user-guide>
@@ -19,8 +20,7 @@
 
 并做了相应的修正以及更新，如有纰漏，望斧正。
 
----
-License
+## License
 
 采用 [CC BY-NC-SA 4.0][5] 许可协议进行许可。
 
@@ -29,3 +29,4 @@ License
 [3]: https://github.com/flyouting
 [4]: https://www.gitbook.com/book/flyouting/gradle-plugin-user-guide-cn/details
 [5]: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
